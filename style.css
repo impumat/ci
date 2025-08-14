@@ -24,8 +24,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1020px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: 0;
   padding: 0 20px;
 }
 
@@ -279,6 +279,7 @@ footer strong {
   }
 
   .carousel-track {
-    width: 1200%;
+    width: 100%;
   }
 }
+
