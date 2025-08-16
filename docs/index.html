@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IMPUMAT<sup>®</sup> – Excel Accounting Matrix</title>
+  <meta name="description" content="IMPUMAT is an automated Excel accounting matrix, available in English and French for freelancers, entrepreneurs and SMEs.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body id="top">
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-wrapper">
+      <img src="images/logo.png" alt="IMPUMAT Logo" class="logo">
+      <ul>
+        <li><a href="#top" class="active">Home</a></li>
+        <li><a href="#intro">Overview</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#purchase">Download</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="index_fr.html" class="lang-switch" title="Passer en français">
+            <!-- French flag -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15">
+              <rect width="1" height="2" x="0" fill="#0055A4"/>
+              <rect width="1" height="2" x="1" fill="#fff"/>
+              <rect width="1" height="2" x="2" fill="#EF4135"/>
+            </svg>
+            FR
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="header-wrapper">
+      <div class="header-text">
+        <h1><span class="highlight">IMPUMAT<sup>®</sup></span></h1>
+        <p>The Professional Excel Accounting Matrix</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section id="intro" class="intro">
+    <h2>Optimize Your Accounting Today</h2>
+    <p>IMPUMAT is an Intelligent Excel Accounting Matrix, available in English and French, designed for Entrepreneurs, SMEs, and Freelancers who want to track their accounting entries in a simple and automated way.</p> 
+    <p>The main purpose of this Accounting Matrix is to spare accountants the tedious task of grouping and calculating totals of the various accounts recorded in the journal during the accounting period.</p>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="screenshots" id="screenshots">
+    <h2>Screenshots</h2>
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+      <div class="carousel-track">
+        <!-- English screenshots -->
+        <img src="images/en/screenshot1.jpg" alt="Screenshot 1">
+        <img src="images/en/screenshot2.jpg" alt="Screenshot 2">
+        <img src="images/en/screenshot3.jpg" alt="Screenshot 3">
+        <img src="images/en/screenshot4.jpg" alt="Screenshot 4">
+        <img src="images/en/screenshot5.jpg" alt="Screenshot 5">
+        <img src="images/en/screenshot6.jpg" alt="Screenshot 6">
+        <img src="images/en/screenshot7.jpg" alt="Screenshot 7">
+        <img src="images/en/screenshot8.jpg" alt="Screenshot 8">
+        <img src="images/en/screenshot9.jpg" alt="Screenshot 9">
+        <!-- Shared cover -->
+        <img src="images/couverture.jpg" alt="Cover">
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="purchase" id="purchase">
+  <h2>Download</h2>
+
+  <a class="btn"
+     href="https://payhip.com/b/pa6wK"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Download English version IMPUMAT">
+    Download English version
+  </a>
+
+  <a class="btn"
+     href="https://payhip.com/b/IYlBt"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Télécharger la version française IMPUMAT">
+    Télécharger la version française
+  </a>
+</section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Does IMPUMAT work with all versions of Excel?</h3>
+      <p>Yes, IMPUMAT is compatible with all Excel versions (Windows and Mac). For optimal compatibility, we recommend Office 2016 or later.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is it possible to accidentally change the layout or formulas?</h3>
+      <p>No, the file is protected to ensure the accuracy of calculations. Only the input fields are editable.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this a one-time payment?</h3>
+      <p>No, this is a yearly subscription with access to updates.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How will I receive IMPUMAT after purchase?</h3>
+      <p>You will receive a secure download link immediately after payment through the Payhip marketplace.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>For any additional questions or specific requests, please contact us:</p>
+    <p><a href="mailto:pbc69sarl@yahoo.fr"><strong>pbc69sarl@yahoo.fr</strong></a></p>
+    <p>or: <strong>donatien.abe@gmail.com</strong></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong><a href="terms.html">Terms & Conditions</a></strong></p>
+    <p>IMPUMAT<sup>®</sup> is a registered trademark.</p> 
+    <p>Any reproduction, modification, or distribution of this Accounting Matrix without authorization is strictly prohibited.</p>
+    <p>© 2025 Providential Business Co. Ltd – All rights reserved.<br>
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+  const track = document.querySelector('.carousel-track');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  const slides = track.children.length;
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === slides - 1;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index < slides - 1) index++;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) index--;
+    updateCarousel();
+  });
+
+  updateCarousel();
+  </script>
+
+  <!-- Scroll spy -->
+  <script>
+  const sections = document.querySelectorAll("section, header");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const top = window.scrollY;
+      const offset = section.offsetTop - 120;
+      const height = section.offsetHeight;
+      if (top >= offset && top < offset + height) {
+        current = section.getAttribute("id");
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>
