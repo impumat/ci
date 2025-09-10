@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IMPUMAT",
+  "url": "https://www.impumat.com",
+  "logo": "https://www.impumat.com/icones/ipmt-512x512.png",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+225-XX-XXX-XXXX",
+      "contactType": "customer support",
+      "availableLanguage": ["French", "English"],
+      "email": "contact@impumat.com"
+    }
+  ]
+}
