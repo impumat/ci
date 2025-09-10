@@ -218,8 +218,13 @@ header {
    Contact
 ========================= */
 .contact h2 {
-  color: #bc3908;
+  color: #bc3908! important;         
+  margin-bottom: 5px;
+  font-size: 1.8rem;    
+  text-align: left;     
+  padding-left: 20px;   
 }
+
 
 #contact {
   max-width: 800px;
