@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Encodage et responsive -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IMPUMAT – Excel Accounting Matrix</title>
-  <meta name="description" content="IMPUMAT is an automated Excel accounting matrix, available in English and French for freelancers, entrepreneurs and SMEs.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Titre et SEO -->
+  <title>IMPUMAT – Smart Accounting Matrix in Excel</title>
+  <meta name="description" content="IMPUMAT is an intelligent Excel-based accounting matrix, simple, fast, bilingual. Save time and secure your numbers.">
+  <meta name="keywords" content="IMPUMAT, Excel accounting, accounting template, bilingual, smart spreadsheet, finance tool">
+  <meta name="author" content="D. ABE (IMPUMAT Conception)">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://www.impumat.com/">
+  <link rel="alternate" hreflang="en" href="https://www.impumat.com/index.html">
+  <link rel="alternate" hreflang="fr" href="https://www.impumat.com/index_fr.html">
+
+  <!-- Favicons ICO / SVG -->
+  <link rel="icon" type="image/x-icon" href="icones/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="icones/favicon.svg">
+
+  <!-- Favicons PNG -->
+  <link rel="icon" type="image/png" sizes="16x16" href="icones/ favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icones/ favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icones/ favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="icones/ favicon-256x256.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icones/ favicon-512x512.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icones/apple-touch-icon.png">
+
+  <!-- Android & Manifest -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#003366">
+
+  <!-- Safari & Windows -->
+  <link rel="mask-icon" href="icones/safari-pinned-tab.svg" color="#ff9900">
+  <meta name="msapplication-TileColor" content="#003366">
+  <meta name="msapplication-TileImage" content="icones/mstile-70x70.png">
+  <meta name="msapplication-TileImage" content="icones/mstile-150x150.png">
+  <meta name="msapplication-TileImage" content="icones/mstile-310x150.png">
+  <meta name="msapplication-TileImage" content="icones/mstile-310x310.png">
+  <meta name="msapplication-config" content="icones/browserconfig.xml">
+
+  <!-- CSS global -->
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="contact.css">
+
+  <!-- JS global et formulaires -->
+  <script src="form_utils.js" defer></script>
+  <script src="contact.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IMPUMAT – Smart Accounting Matrix in Excel">
+  <meta property="og:site_name" content="IMPUMAT">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.impumat.com/index.html">
+  <meta property="og:image" content="https://www.impumat.com/icones/ipmt-256x256.png">
+  <meta property="og:description" content="Smart Excel accounting template – fast, bilingual, secure. Download instantly after purchase.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IMPUMAT – Smart Accounting Matrix in Excel">
+  <meta name="twitter:description" content="Save time and avoid errors with the IMPUMAT Excel matrix. Bilingual FR/EN, instant download.">
+  <meta name="twitter:image" content="https://www.impumat.com/icones/ipmt-256x256.png">
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json" src="seo_contact.json"></script>
 </head>
 <body id="top">
 
@@ -97,38 +162,62 @@
 </section>
 
   <!-- FAQ -->
-  <section class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>Does IMPUMAT work with all versions of Excel?</h3>
-      <p>Yes, IMPUMAT is compatible with all Excel versions (Windows and Mac). For optimal compatibility, we recommend Office 2016 or later.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Is it possible to accidentally change the layout or formulas?</h3>
-      <p>No, the file is protected to ensure the accuracy of calculations. Only the input fields are editable.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Is this a one-time payment?</h3>
-      <p>No, this is a yearly subscription with access to updates.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How will I receive IMPUMAT after purchase?</h3>
-      <p>You will receive a secure download link immediately after payment through the Payhip marketplace.</p>
-    </div>
-  </section>
+<section class="faq" id="faq">
+  <h2>Frequently Asked Questions</h2>
 
-  <!-- Contact --> 
+  <div class="faq-item">
+    <h3>Does IMPUMAT work without Internet?</h3>
+    <p>Yes, the matrix runs autonomously in Excel, with no connection required.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Does IMPUMAT work with all versions of Excel?</h3>
+    <p>Yes, IMPUMAT is compatible with all Excel versions (Windows and Mac). For optimal compatibility, we recommend Office 2016 or later.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is it possible to accidentally change the layout or formulas?</h3>
+    <p>No, the file is protected to ensure the accuracy of calculations. Only the input fields are editable.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is this a one-time payment?</h3>
+    <p>No, this is a yearly subscription with access to updates.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How will I receive IMPUMAT after purchase?</h3>
+    <p>You will receive a secure download link immediately after payment through the Payhip marketplace.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I use IMPUMAT for both personal and professional accounting?</h3>
+    <p>Yes, IMPUMAT is designed to be flexible. It can be used by freelancers, small businesses, and anyone who needs reliable accounting support in Excel.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is there any technical support if I encounter difficulties?</h3>
+    <p>Yes, our support team is available by email to assist you in case of questions or technical issues.</p>
+  </div>
+</section>
+
+ <!-- Contact --> 
 <section class="contact" id="contact">
   <h2>Contact</h2>
-  <p>For any questions or specific requests, please contact us:</p>
+  <p>For any questions or specific requests, please contact us :</p> 
   <p>
-    <a href="mailto:contact@impumat.com?subject=Request%20for%20Information&body=Hello,%20I%20would%20like%20to%20get%20more%20information%20about%20IMPUMAT.">
-      <strong>contact@impumat.com</strong>
+    <a href="form_contact.html">
+      <strong>Contact</strong>
+    </a>
+or: <strong>donatien.abe@gmail.com</strong></p>
+
+  <p> We value your input! Share your experience with IMPUMAT :
+    <a href="form_feedback.html">
+      <strong>Feedback</strong>
     </a>
   </p>
-  <p>or: <strong>donatien.abe@gmail.com</strong></p>
 </section>
- 
+
   <!-- Footer -->
   <footer>
     <p><strong><a href="terms.html">Terms & Conditions</a></strong></p>
@@ -190,6 +279,8 @@
 
 </body>
 </html>
+
+
 
 
 
