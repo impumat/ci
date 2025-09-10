@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IMPUMAT – Formulaire de Contact (FR)</title>
+  <meta name="description" content="Contactez l’équipe IMPUMAT via notre formulaire sécurisé. Version française.">
+  <meta name="author" content="D. ABE (IMPUMAT Conception)">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="canonical" href="https://www.impumat.com/form_contact_fr.html">
+
+  <link rel="icon" type="image/x-icon" href="icones/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="icones/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="icones/favicon-256x256.png">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <script src="form_utils.js" defer></script>
+  <script src="contact.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <meta property="og:title" content="IMPUMAT – Formulaire de Contact (FR)">
+  <meta property="og:site_name" content="IMPUMAT">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.impumat.com/form_contact_fr.html">
+  <meta property="og:image" content="https://www.impumat.com/icones/favicon-256x256.png">
+  <meta property="og:description" content="Contactez l’équipe IMPUMAT via notre formulaire sécurisé. Version française.">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IMPUMAT – Formulaire de Contact (FR)">
+  <meta name="twitter:description" content="Contactez l’équipe IMPUMAT via notre formulaire sécurisé. Version française.">
+  <meta name="twitter:image" content="https://www.impumat.com/icones/favicon-256x256.png">
+
+  <script type="application/ld+json" src="seo_contact.json"></script>
+</head>
+
+<body>
+  <h2>Formulaire de contact général</h2>
+  <form action="https://formsubmit.co/contact@impumat.com" method="POST">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <!-- Redirections -->
+    <input type="hidden" name="_next" value="https://impumat.com/merci.html">
+    <input type="hidden" name="_error" value="https://impumat.com/erreur.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="btn">Envoyer</button>
+  </form>
+ </body>
+</html>
