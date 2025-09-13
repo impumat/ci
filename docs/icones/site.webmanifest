@@ -1,6 +1,6 @@
 {
-  "name": "ImpuMAT",
-  "short_name": "ImpuMAT",
+  "name": "MyWebSite",
+  "short_name": "MyIMPUMAT",
   "icons": [
     {
       "src": "/icones/web-app-manifest-192x192.png",
