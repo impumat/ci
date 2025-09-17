@@ -14,9 +14,10 @@
   <meta name="robots" content="index, follow">
 
   <!-- Canonical & hreflang -->
-  <link rel="canonical" href="https://www.impumat.com/index_fr.html">
-  <link rel="alternate" hreflang="fr" href="https://www.impumat.com/index_fr.html">
-  <link rel="alternate" hreflang="en" href="https://www.impumat.com/index.html">
+  <link rel="canonical" href="https://www.impumat.com/index_fr.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.impumat.com/index_fr.html" />
+  <link rel="alternate" hreflang="en" href="https://www.impumat.com/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.impumat.com/" />
 
    <!-- Favicons ICO / SVG -->
   <link rel="shortcut icon" href="/icones/favicon.ico" />
@@ -74,8 +75,83 @@
   <meta name="twitter:description" content="Gagnez du temps et sécurisez vos chiffres avec la matrice IMPUMAT sur Excel. Bilingue FR/EN.">
   <meta name="twitter:image" content="https://www.impumat.com/icones/favicon-256x256.png">
 
-  <!-- Données structurées JSON-LD -->
-  <script type="application/ld+json" src="seo_contact.json"></script>
+  <!-- Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IMPUMAT",
+  "url": "https://www.impumat.com",
+  "logo": "https://www.impumat.com/images/logo.png",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "email": "contact@impumat.com",
+      "contactType": "customer support",
+      "availableLanguage": ["French","English"]
+    }
+  ]
+}
+</script>
+
+<!-- Product FR -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "IMPUMAT",
+  "description": "IMPUMAT est une matrice comptable Excel intelligente conçue pour automatiser vos écritures, simplifier le suivi des comptes et obtenir vos totaux en temps réel.",
+  "image": "https://www.impumat.com/images/logo.png",
+  "brand": {
+    "@type": "Organization",
+    "name": "IMPUMAT",
+    "logo": "https://www.impumat.com/images/logo.png",
+    "url": "https://www.impumat.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://payhip.com/impumat_fr",
+    "priceCurrency": "USD",
+    "price": "145",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+<!-- FAQ FR -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'IMPUMAT ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IMPUMAT est une matrice comptable Excel intelligente qui automatise vos écritures et fournit des totaux en temps réel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "IMPUMAT est-il disponible en plusieurs langues ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, IMPUMAT est disponible en français et en anglais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le prix d'IMPUMAT ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IMPUMAT_FR est proposé à 145 $ par an (environ 134 €)."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body id="top">
 
@@ -289,6 +365,7 @@
 
 </body>
 </html>
+
 
 
 
