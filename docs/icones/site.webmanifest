@@ -1,6 +1,14 @@
 {
-  "name": "MyWebSite",
+  "name": "IMPUMAT",
   "short_name": "ImpuMAT",
+  "description": "Matrice comptable Excel intelligente - disponible en Français et en Anglais",
+  "lang": "en",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#003366",
   "icons": [
     {
       "src": "/icones/web-app-manifest-192x192.png",
@@ -14,8 +22,6 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
+
