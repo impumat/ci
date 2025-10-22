@@ -33,49 +33,34 @@
   <meta property="og:site_name" content="IMPUMAT">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.impumat.com/form_feedback.html">
-  <meta property="og:image" content="https://www.impumat.com/icones/favicon-256x256.png">
+  <meta property="og:image" content="https://www.impumat.com/previews/preview2.jpg">
   <meta property="og:description" content="Provide feedback to the IMPUMAT team via our secure form.">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IMPUMAT – Feedback Form">
   <meta name="twitter:description" content="Provide feedback to the IMPUMAT team via our secure form.">
-  <meta name="twitter:image" content="https://www.impumat.com/icones/favicon-256x256.png">
+  <meta name="twitter:image" content="https://www.impumat.com/previews/preview4.jpg">
 
   <script type="application/ld+json" src="seo_contact.json"></script>
 </head>
 <body>
   <h2>Share your Feedback</h2>
   <form action="https://formsubmit.co/contact@impumat.com" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+  <!-- Redirections et sujet -->
+  <input type="hidden" name="_next" value="https://impumat.com/thanks.html">
+  <input type="hidden" name="_error" value="https://impumat.com/error.html">
+  <input type="hidden" name="_subject" value="💬 New Feedback from IMPUMAT Website">
+  <input type="hidden" name="_captcha" value="false">
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <!-- Champs du formulaire -->
+  <label for="name">Your Name (optional):</label>
+  <input type="text" id="name" name="name" placeholder="Your name (optional)">
 
-    <label for="feedback">Your Feedback:</label>
-    <textarea id="feedback" name="feedback" required></textarea>
+  <label for="feedback">Your Feedback:</label>
+  <textarea id="feedback" name="feedback" placeholder="Please share your thoughts or suggestions..." rows="5" required>    </textarea>
 
-    <label for="satisfaction">Your satisfaction level:</label>
-    <select id="satisfaction" name="satisfaction" required>
-    <option value="" disabled selected>-- Select --</option>
-    <option value="1">Fairly satisfactory</option>
-    <option value="2">Satisfactory</option>
-    <option value="3">Average</option>
-    <option value="4">Good</option>
-    <option value="5">Excellent</option>
-    </select>
-
-     <!-- Redirections -->
-    <input type="hidden" name="_next" value="https://impumat.com/thanks.html">
-    <input type="hidden" name="_error" value="https://impumat.com/error.html">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit" class="btn feedback-btn">Send Feedback</button>
-  </form>
+  <button type="submit">Send Feedback</button>
+ </form>
  </body>
-
 </html>
-
-
-
