@@ -102,14 +102,30 @@ header {
   color: #06d6a0;
 }
 
-/* =========================
+/* ========================= 
    Sections communes
-========================= */
+  ========================= */
 .intro, .screenshots, .purchase, .faq, .legal {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
   text-align: center;
+}
+
+/* Alignement spécifique Intro */
+.intro {
+  text-align: left;
+}
+
+.intro h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0000CC;
+}
+
+.intro p {
+  line-height: 1.8;
+  margin-bottom: 18px;
 }
 
 /* =========================
@@ -120,21 +136,33 @@ header {
   overflow: hidden;
   max-width: 750px;
   margin: 0 auto;
+
+  background: #0B3168FF;
+  border-radius: 14px;
+
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+  align-items: center;
 }
 
 .carousel-track img {
   width: 100%;
   max-width: 750px;
   flex: 0 0 auto;
-  height: auto;
-  border-radius: 8px;
+
+  max-height: 400px;
+
   object-fit: contain;
+  border-radius: 8px;
+  display: block;
 }
 
 .prev, .next {
@@ -264,8 +292,11 @@ footer strong {
 }
 
 /* ==== PATCH MINI-BLOG ==== */
+.blog-section h2 {
+  color: #0000CC! important;
+}
+
 .blog-section p {
-  color: #333; /* meilleur contraste */
   line-height: 1.6; /* lisibilité renforcée */
 }
 
@@ -321,6 +352,20 @@ footer strong {
   font-size: 0.85rem;  /* texte plus compact */
 }
 
+.blog-card {
+  background: white;
+  border-radius: 10px;
+}
+
+.blog-section {
+  background: rgba(252,190,100,0.2);
+  padding: 40px 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 20px rgba(11, 49, 104, 0.12);
+  border: 1px solid rgba(0, 51, 102, 0.08);
+}
+
 /* =========================
    Responsive mobile
 ========================= */
@@ -360,4 +405,95 @@ footer strong {
   .carousel-track {
     width: 100%;
   }
+}
+
+/* ===== IMPUMAT Color Variables ===== */
+:root {
+  --primary: #003366;
+  --gold: #ff9900;
+  --cyan: #00bcd4;
+  --pink: #e91e63;
+}
+
+/* ===== IMPUMAT Modern UI ===== */
+
+/* Optional modern section background */
+.section-alt {
+  background: rgba(252,190,100,0.2);
+}
+
+/* Blog cards hover effect */
+.blog-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 6px 20px rgba(0, 188, 212, 0.2);
+}
+
+/* FAQ modern shadow */
+.faq-item {
+  box-shadow:
+    0 4px 14px rgba(11, 49, 104, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 22px rgba(11, 49, 104, 0.28);
+}
+
+/* Accent title colors */
+h2 span.accent {
+  color: var(--cyan);
+}
+
+h2 span.highlight {
+  color: var(--pink);
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(
+    135deg,
+    var(--gold),
+    var(--pink)
+  );
+
+  color: white;
+  border-radius: 8px;
+  padding: 12px 20px;
+
+  transition:
+    all 0.3s ease;
+}
+
+/* Buttons hover */
+.btn:hover {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--cyan)
+  );
+
+  transform: translateY(-2px);
+}
+
+/* Coming soon badge */
+.badge-coming {
+  background: rgba(233, 30, 99, 0.1);
+
+  color: var(--pink);
+
+  padding: 4px 10px;
+
+  border-radius: 20px;
+
+  font-size: 0.8rem;
+
+  margin-left: 8px;
 }
