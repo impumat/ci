@@ -3,7 +3,7 @@
   "short_name": "IMPT",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#003366",
+  "background_color": "#006666",
   "theme_color": "#003366",
   "icons": [
     {

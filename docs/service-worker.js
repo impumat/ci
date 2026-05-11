@@ -1,4 +1,4 @@
-const CACHE_NAME = "impumat-cache-v1";
+const CACHE_NAME = "impumat-cache-v2";
 
 // Fichiers critiques à mettre en cache
 const ASSETS_TO_CACHE = [
@@ -55,16 +55,20 @@ self.addEventListener("fetch", (event) => {
       }
 
       return fetch(event.request)
-        .then((networkResponse) => {
-          // clone pour cache
-          const responseClone = networkResponse.clone();
+  .then((networkResponse) => {
 
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
+    // clone pour cache
+    const responseClone = networkResponse.clone();
 
-          return networkResponse;
-        })
+    // Cache uniquement les ressources locales
+    if (event.request.url.startsWith(self.location.origin)) {
+      caches.open(CACHE_NAME).then((cache) => {
+        cache.put(event.request, responseClone);
+      });
+    }
+
+    return networkResponse;
+  })
         .catch(() => {
           // fallback simple si offline
           if (event.request.mode === "navigate") {
