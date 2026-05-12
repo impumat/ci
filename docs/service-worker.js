@@ -1,28 +1,38 @@
-const CACHE_NAME = "impumat-cache-v2";
+// ============================
+// Service Worker IMPUMAT v2
+// Cache propre + offline léger + safe external calls
+// ============================
 
-// Fichiers critiques à mettre en cache
-const ASSETS_TO_CACHE = [
+const CACHE_NAME = "impumat-v2";
+
+// 🎯 App Shell uniquement (UI stable)
+const STATIC_CACHE = [
   "/",
   "/index.html",
   "/index_fr.html",
   "/style.css",
   "/script.js",
-  "/contact.css",
-  "/images/logo.png",
-  "/images/couverture2.jpg"
+  "/icones/site.webmanifest",
+  "/icones/web-app-manifest-192x192.png",
+  "/icones/web-app-manifest-512x512.png"
 ];
 
-// INSTALL
+// ============================
+// INSTALL : pré-cache minimal
+// ============================
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
+      return cache.addAll(STATIC_CACHE);
     })
   );
+
   self.skipWaiting();
 });
 
-// ACTIVATE (nettoyage anciennes versions)
+// ============================
+// ACTIVATE : nettoyage ancien cache
+// ============================
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
@@ -35,46 +45,49 @@ self.addEventListener("activate", (event) => {
       );
     })
   );
+
   self.clients.claim();
 });
 
-// FETCH (logique principale)
+// ============================
+// FETCH STRATEGY
+// ============================
 self.addEventListener("fetch", (event) => {
   const requestUrl = event.request.url;
 
-  // 🔴 EXCLUSION PAYHIP (très important)
-  if (requestUrl.includes("payhip.com")) {
+  // ❌ NE JAMAIS CACHER les services externes
+  if (
+    requestUrl.includes("payhip.com") ||
+    requestUrl.includes("formsubmit.co") ||
+    requestUrl.includes("google") ||
+    requestUrl.includes("analytics")
+  ) {
+    return; // réseau direct uniquement
+  }
+
+  // 🟢 NAVIGATION HTML → Network First (forms inclus)
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        return caches.match("/index.html");
+      })
+    );
     return;
   }
 
-  // Cache-first pour ressources internes
+  // 🟢 STATIC ASSETS → Cache First
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      return fetch(event.request)
-  .then((networkResponse) => {
-
-    // clone pour cache
-    const responseClone = networkResponse.clone();
-
-    // Cache uniquement les ressources locales
-    if (event.request.url.startsWith(self.location.origin)) {
-      caches.open(CACHE_NAME).then((cache) => {
-        cache.put(event.request, responseClone);
-      });
-    }
-
-    return networkResponse;
-  })
-        .catch(() => {
-          // fallback simple si offline
-          if (event.request.mode === "navigate") {
-            return caches.match("/index.html");
-          }
-        });
+    caches.match(event.request).then((cached) => {
+      return (
+        cached ||
+        fetch(event.request).then((response) => {
+          // update cache dynamique léger
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        })
+      );
     })
   );
 });
