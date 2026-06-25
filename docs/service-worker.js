@@ -66,20 +66,14 @@ self.addEventListener("fetch", (event) => {
   }
 
   // 🟢 NAVIGATION HTML → Network First (forms inclus)
-  if (event.request.mode === "navigate") {
-  event.respondWith(
-    fetch(event.request).catch(() => {
-      const lang = navigator.language || "";
-
-      const fallback = lang.startsWith("fr")
-        ? "/index_fr.html"
-        : "/index_en.html";
-
-      return caches.match(fallback);
-    })
-  );
-  return;
-}
+   if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        return caches.match("/index_fr.html");
+      })
+    );
+    return;
+  }
 
   // 🟢 STATIC ASSETS → Cache First
   event.respondWith(
