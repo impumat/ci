@@ -378,10 +378,15 @@ footer strong {
   
   .nav-wrapper {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
+    padding: 0;
     margin: 0;
-    padding: 0 10px;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .version-switch {
