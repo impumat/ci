@@ -378,30 +378,19 @@ footer strong {
   
   .nav-wrapper {
     width: 100%;
-    max-width: 100%;
-    padding: 0;
+    max-width: none;
     margin: 0;
-    display: flex;
+    padding: 0 10px;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-   
-     .nav-wrapper ul {
-    padding: 0;
-    margin: 0;
-    gap: 0;
   }
 
-    .nav-wrapper li {
+  .nav-wrapper li {
     margin: 0 1px;
   }
 
-    .nav-wrapper li a { 
-   padding: 2px 2px;
-   font-size: 12px;
+  .nav-wrapper li a { 
+    padding: 2px 2px;
+    font-size: 12px;
   }
    
   .version-switch {
