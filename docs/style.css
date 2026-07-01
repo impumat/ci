@@ -388,7 +388,22 @@ footer strong {
     box-sizing: border-box;
     overflow: hidden;
   }
+   
+     .nav-wrapper ul {
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
 
+    .nav-wrapper li {
+    margin: 0 1px;
+  }
+
+    .nav-wrapper li a { 
+   padding: 2px 2px;
+   font-size: 12px;
+  }
+   
   .version-switch {
     display: inline-block;
     margin-top: 5px;
