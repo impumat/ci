@@ -1,0 +1,52 @@
+/* ============================
+   GUIDE IMPUMAT
+   ============================ */
+
+.guide-position {
+  width: 100%;
+  text-align: center;
+  padding-left: 25%;
+}
+.guide-link {
+  color: red;
+  font-weight: bold;
+  animation: clignote 1.2s infinite;
+  text-decoration: none;
+}
+
+.guide-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes clignote {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+
+/* Contenu de la fiche GUIDE */
+
+.guide-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  color: #00129A;
+  text-align: left;
+}
+
+.guide-container h1 {
+  font-size: 28px;
+}
+
+.guide-container h2 {
+  margin-top: 25px;
+}
+
+.guide-container p {
+  line-height: 1.6;
+}
+
+.guide-container strong {
+  font-weight: bold;
+}

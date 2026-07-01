@@ -112,6 +112,11 @@ header {
   text-align: center;
 }
 
+.guide-position {
+ text-align: left;
+ padding-right: 10%;
+}
+
 /* Alignement spécifique Intro */
 .intro {
   text-align: left;
@@ -384,19 +389,19 @@ footer strong {
     flex-wrap: wrap;
   }
 
-  .nav-wrapper li {
-    margin: 0 1px;
-  }
+   .nav-wrapper li {
+   margin: 0 1px;
+}
 
-  .nav-wrapper li a { 
-    padding: 2px 2px;
-    font-size: 12px;
-  }
-   
-  .version-switch {
-    display: inline-block;
-    margin-top: 5px;
-  }
+.nav-wrapper li a { 
+   padding: 2px 2px;
+   font-size: 12px;
+}
+
+.version-switch {
+   display: inline-block;
+   margin-top: 5px;
+}
 
   .btn {
     display: block;
