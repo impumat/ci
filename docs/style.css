@@ -296,6 +296,70 @@ footer strong {
   font-weight: bold;
 }
 
+
+/* =========================
+   Pages juridiques
+========================= */
+
+body.legal-page .last-update {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+body.legal-page {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  line-height: 1.6;
+  background-color: #fdf8e1;
+  color: #00296b;
+}
+
+body.legal-page h1 {
+  color: #006666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+body.legal-page h2 {
+  color: #bc3908;
+  margin-top: 30px;
+}
+
+body.legal-page a {
+  color: #006699;
+  text-decoration: none;
+}
+
+body.legal-page a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Pied de page juridique
+========================= */
+
+footer.legal-footer {
+  text-align: center;
+  padding: 24px 20px;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  font-size: 16px;
+}
+
+footer.legal-footer a {
+  color: #000EEE;
+  text-decoration: none;
+}
+
+footer.legal-footer a:hover {
+  text-decoration: underline;
+}
+
+footer.legal-footer strong {
+  font-weight: bold;
+}
+
+
 /* ==== PATCH MINI-BLOG ==== */
 .blog-section h2 {
   color: #0000CC! important;
