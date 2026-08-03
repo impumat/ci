@@ -105,8 +105,8 @@ header {
 /* ========================= 
    Sections communes
   ========================= */
-.intro, .screenshots, .purchase, .faq, .legal {
-  padding: 40px 20px;
+.intro, .screenshots, .purchase, .faq {
+  padding: 20px;
   max-width: 1000px;
   margin: auto;
   text-align: center;
@@ -290,16 +290,22 @@ footer {
   padding: 20px;
   background-color: #eee;
   font-size: 14px;
+  border-top: 2px solid #bc3908;
 }
 
 footer strong {
   font-weight: bold;
 }
 
-
 /* =========================
    Pages juridiques
 ========================= */
+
+.content-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
 body.legal-page h1 {
     text-align: center;
@@ -309,7 +315,7 @@ body.legal-page h1 {
 
 body.legal-page .last-update {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 body.legal-page h2 {
@@ -317,6 +323,16 @@ body.legal-page h2 {
     margin-top: 30px;
 }
 
+.content-container h2,
+.content-container p,
+.content-container ul,
+.content-container ol {
+    text-align: left;
+}
+
+.content-container p:last-of-type {
+    margin-bottom: 50px;
+}
 
 /* ==== PATCH MINI-BLOG ==== */
 .blog-section h2 {
